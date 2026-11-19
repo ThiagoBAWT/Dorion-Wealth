@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dorion Wealth | Sonhar. Fazer. Viver.</title>
+<meta name="description" content="Dorion Wealth, escritório Wealth Powered by AWT em Salvador. Planejamento patrimonial hiperpersonalizado para empresários, profissionais em ascensão e jovens de alto potencial.">
+<meta property="og:title" content="Dorion Wealth | Sonhar. Fazer. Viver."><meta property="og:description" content="Planejamento patrimonial hiperpersonalizado em Salvador."><meta property="og:type" content="website"><meta property="og:image" content="img/farol-sunset.jpg"><meta name="theme-color" content="#0d7a5f">
+<link rel="icon" href="dorion-wealth-icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* brand */
+  --g:#0d7a5f;--g-600:#0a6350;--g-700:#08493b;--g-800:#06362b;--g-900:#032219;--g-300:#5fc4a5;--mint:#8fe3c6;
+  --sand:#f5ecdc;--sand-2:#efe2cb;--cream:#fbf7ef;--amb:#f2b35e;--amb-d:#d98f2e;--amb-l:#f7c27c;--cor:#ee7b5a;--sea:#0b3e52;--sea-d:#072a39;
+  --ink:#0b1f1a;--ink-2:#32443e;--ink-3:#5b6b66;--line:rgba(11,31,26,.12);--line-w:rgba(255,255,255,.16);
+  /* type */
+  --f-d:'Sora',system-ui,sans-serif;--f-b:'Figtree',system-ui,sans-serif;
+  --fs-xs:.75rem;--fs-sm:.875rem;--fs-md:1.0625rem;--fs-lg:1.25rem;--fs-xl:clamp(1.5rem,2.2vw,2rem);
+  --fs-2xl:clamp(2rem,4vw,3.4rem);--fs-3xl:clamp(2.6rem,6vw,5.4rem);--fs-hero:clamp(3.8rem,8.2vw,8rem);
+  /* space */
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:144px;
+  --gut:clamp(20px,5vw,72px);--maxw:1320px;
+  /* radius */
+  --r1:10px;--r2:18px;--r3:28px;--r-pill:999px;
+  /* elevation */
+  --e1:0 1px 2px rgba(3,34,25,.08),0 1px 1px rgba(3,34,25,.04);
+  --e2:0 6px 16px -4px rgba(3,34,25,.16),0 2px 4px rgba(3,34,25,.06);
+  --e3:0 18px 40px -12px rgba(3,34,25,.32),0 6px 12px -6px rgba(3,34,25,.12);
+  --e4:0 40px 80px -24px rgba(3,34,25,.5),0 14px 28px -14px rgba(3,34,25,.2);
+  --e-in:inset 0 1px 0 rgba(255,255,255,.18);
+  /* motion */
+  --ease:cubic-bezier(.22,1,.36,1);--ease-in:cubic-bezier(.64,0,.78,0);--ease-io:cubic-bezier(.76,0,.24,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --t1:.2s;--t2:.45s;--t3:.9s;--t4:1.4s;
+  --chap-bg:#0d7a5f;--chap-ink:#fff;--chap-acc:#f2b35e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{font-family:var(--f-b);font-size:var(--fs-md);line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--amb);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:calc(var(--maxw) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--f-d);font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+h1,h2,h3,h4{font-family:var(--f-d);font-weight:600;line-height:1.04;letter-spacing:-.025em}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--s3);color:var(--g)}
+.eyebrow::before{content:'';width:34px;height:2px;background:currentColor;border-radius:2px}
+.dark .eyebrow{color:var(--mint)}
+.btn{display:inline-flex;align-items:center;gap:var(--s3);padding:16px 26px;border-radius:var(--r-pill);font-family:var(--f-d);font-weight:600;font-size:var(--fs-sm);letter-spacing:.02em;background:var(--amb);color:var(--g-900);box-shadow:var(--e2),var(--e-in);transition:transform var(--t2) var(--spring),box-shadow var(--t2) var(--ease),background var(--t1)}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--e3),var(--e-in);background:var(--amb-l)}
+.btn .arr{display:inline-block;transition:transform var(--t2) var(--ease)}.btn:hover .arr{transform:translateX(5px)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid var(--line-w);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn.ghost:hover{background:rgba(255,255,255,.2)}
+.btn.green{background:var(--g);color:#fff}.btn.green:hover{background:var(--g-600)}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:100;background:var(--g-900);color:#fff;display:flex;align-items:flex-end;justify-content:space-between;padding:var(--gut);transition:transform 1s var(--ease-io)}
+#loader.done{transform:translateY(-101%)}
+#loader .num{font-family:var(--f-d);font-weight:700;font-size:clamp(6rem,22vw,20rem);line-height:.8;letter-spacing:-.06em;color:var(--amb)}
+#loader .lt{max-width:260px;color:var(--mint)}
+#loader .bar{position:absolute;left:0;top:0;height:4px;background:var(--amb);width:0;transition:width .2s linear}
+
+/* nav */
+nav.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px var(--gut);transition:background var(--t2),backdrop-filter var(--t2),padding var(--t2) var(--ease)}
+nav.top.stuck{background:rgba(3,34,25,.62);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);padding-block:10px;box-shadow:0 1px 0 var(--line-w)}
+nav.top img{height:44px;width:auto}
+nav.top .links{display:flex;gap:var(--s6);color:#fff}
+nav.top .links a{font-size:var(--fs-sm);font-weight:500;position:relative;opacity:.86;transition:opacity var(--t1)}
+nav.top .links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--amb);transition:width var(--t2) var(--ease)}
+nav.top .links a:hover{opacity:1}nav.top .links a:hover::after{width:100%}
+nav.top .btn{padding:11px 20px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--g-900);isolation:isolate}
+.hero .ph{position:absolute;inset:0;z-index:-3}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:30% 50%;animation:kb 28s var(--ease-io) infinite alternate;transform-origin:30% 60%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.16) translateX(-1.5%)}}
+.hero::before{content:'';position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(3,34,25,.88) 0%,rgba(8,73,59,.55) 45%,rgba(13,122,95,.1) 100%),linear-gradient(0deg,rgba(3,34,25,.92) 0%,transparent 45%)}
+.hero .sun{position:absolute;right:-10vmax;top:-12vmax;width:46vmax;height:46vmax;border-radius:50%;background:radial-gradient(circle,rgba(242,179,94,.55),rgba(242,179,94,0) 65%);z-index:-1;animation:pulse 9s ease-in-out infinite alternate;mix-blend-mode:screen}
+@keyframes pulse{to{transform:scale(1.18);opacity:.75}}
+.hero .main{padding-top:clamp(96px,14vh,150px);padding-bottom:var(--s6)}
+.hero .kick{color:var(--amb);margin-bottom:var(--s5)}
+.hero h1{font-size:var(--fs-hero);font-weight:700;letter-spacing:-.05em;line-height:.92}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:block;transform:translateY(110%);transition:transform 1.2s var(--ease)}
+body.ready .hero h1 .ln>span{transform:none}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.12s;color:var(--amb)}.hero h1 .ln:nth-child(3)>span{transition-delay:.24s;color:var(--mint)}
+.hero .row{display:flex;flex-wrap:wrap;gap:var(--s6);align-items:flex-end;justify-content:space-between;margin-top:var(--s6)}
+.hero .sub{max-width:520px;font-size:var(--fs-lg);color:rgba(255,255,255,.88)}
+.hero .cta{display:flex;gap:var(--s4);flex-wrap:wrap}
+.disc{border-top:1px solid var(--line-w);background:rgba(3,34,25,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.disc .wrap{padding-block:var(--s4)}
+.disc p{font-size:var(--fs-sm);line-height:1.5;color:rgba(255,255,255,.92);max-width:1100px}
+.disc p+p{margin-top:var(--s2)}.disc a{color:var(--amb);text-decoration:underline;text-underline-offset:3px}
+
+/* sections */
+.sec{position:relative;padding-block:clamp(80px,12vw,168px)}
+.sec.light{background:var(--cream)}.sec.sand{background:var(--sand)}
+.sec.dark{background:var(--g-900);color:#fff}
+.sec h2{font-size:var(--fs-3xl);max-width:16ch}
+.sec.val h2 em{color:var(--amb)}
+.sec h2 em{font-style:normal;color:var(--g)}.dark h2 em{color:var(--amb)}
+.lead{font-size:var(--fs-lg);color:var(--ink-2);max-width:56ch}.dark .lead{color:rgba(255,255,255,.78)}
+.rv{opacity:0;transform:translateY(32px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* belt (shared) */
+.belt{position:relative;overflow:hidden;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.belt.drag{cursor:grabbing}
+.belt .track{position:absolute;left:0;top:0;display:flex;will-change:transform}
+.belt img{pointer-events:none;-webkit-user-drag:none}
+.photobelt{padding-block:var(--s9);background:var(--sand-2)}
+.photobelt .head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s5);flex-wrap:wrap;margin-bottom:var(--s7)}
+.photobelt h2{font-size:var(--fs-2xl);max-width:20ch}
+.photobelt .belt{height:calc(clamp(320px,42vw,520px) + 40px)}
+.pcard{flex:none;width:clamp(260px,30vw,440px);height:clamp(320px,42vw,520px);margin-right:var(--s5);border-radius:var(--r3);overflow:hidden;position:relative;box-shadow:var(--e3);transition:transform var(--t3) var(--ease)}
+.pcard:nth-child(even){transform:translateY(24px)}
+.pcard img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.pcard:hover img{transform:scale(1.08)}
+.pcard::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,34,25,.78),transparent 50%)}
+.pcard span{position:absolute;left:var(--s5);bottom:var(--s5);z-index:2;color:#fff;font-family:var(--f-d);font-weight:500}
+.hint{display:inline-flex;align-items:center;gap:var(--s3);color:var(--ink-3)}
+.hint i{width:42px;height:42px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-style:normal;animation:nudge 2.4s var(--ease) infinite}
+@keyframes nudge{0%,100%{transform:translateX(-4px)}50%{transform:translateX(6px)}}
+.dark .hint,.chap .hint{color:rgba(255,255,255,.7)}
+
+/* sobre */
+.sobre .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,120px);align-items:center}
+.wall{position:relative;height:clamp(460px,52vw,680px)}
+.fr{position:absolute;background:#fff;padding:12px 12px 44px;border-radius:6px;box-shadow:var(--e4);transition:transform var(--t3) var(--ease),box-shadow var(--t3) var(--ease)}
+.fr img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.fr figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--f-d);font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.fr:hover{transform:rotate(0) scale(1.05) translateY(-8px)!important;box-shadow:0 60px 100px -30px rgba(3,34,25,.6);z-index:9}
+.fr.a{left:0;top:6%;width:56%;aspect-ratio:4/5;transform:rotate(-4deg)}
+.fr.b{right:0;top:0;width:46%;aspect-ratio:1;transform:rotate(5deg);z-index:2}
+.fr.c{right:6%;bottom:0;width:58%;aspect-ratio:4/3;transform:rotate(-2deg);z-index:3}
+.banker{display:flex;align-items:center;gap:var(--s4);margin-top:var(--s7);padding:var(--s4) var(--s5);border-radius:var(--r2);background:#fff;box-shadow:var(--e2);width:fit-content}
+.banker .av{width:52px;height:52px;border-radius:50%;background:var(--g);display:grid;place-items:center;overflow:hidden}
+.banker .av img{width:28px}
+.banker b{display:block;font-family:var(--f-d);font-weight:600}.banker small{color:var(--ink-3)}
+.sobre p{margin-top:var(--s5)}.sobre h2,.dif h2{font-size:var(--fs-2xl);max-width:20ch}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s6)}
+.chips span{padding:8px 16px;border-radius:var(--r-pill);background:var(--sand);border:1px solid var(--line);font-size:var(--fs-sm);font-weight:500;transition:background var(--t1),color var(--t1),transform var(--t2) var(--spring)}
+.chips span:hover{background:var(--g);color:#fff;transform:translateY(-3px)}
+
+/* chapters */
+.chap{background:var(--chap-bg);color:var(--chap-ink);transition:background 1.1s var(--ease-io),color 1.1s var(--ease-io);padding-block:clamp(80px,10vw,150px);overflow:hidden;position:relative}
+.chap .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--s5);margin-bottom:var(--s7)}
+.chap h2{font-size:var(--fs-3xl);max-width:14ch}
+.chap h2 em{font-style:normal;color:var(--chap-acc);transition:color 1.1s}
+.chap .belt{height:clamp(440px,48vw,620px);perspective:1500px}
+.chap .track{transform-style:preserve-3d}
+.cc{flex:none;width:clamp(280px,42vw,600px);height:clamp(400px,44vw,560px);margin-right:var(--s6);border-radius:var(--r3);overflow:hidden;position:relative;box-shadow:var(--e4);background:#000;transform-style:preserve-3d}
+.cc img{width:100%;height:100%;object-fit:cover}
+.cc::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,34,25,.88),transparent 62%)}
+.cc .txt{position:absolute;left:var(--s6);right:var(--s6);bottom:var(--s6);z-index:2;color:#fff}
+.cc .n{font-family:var(--f-d);font-size:var(--fs-xs);letter-spacing:.24em;color:var(--amb)}
+.cc h3{font-size:clamp(2.2rem,4.4vw,3.8rem);margin:var(--s2) 0}
+.cc p{color:rgba(255,255,255,.88);max-width:34ch;font-size:var(--fs-md)}
+.dots{display:flex;gap:var(--s3);margin-top:var(--s6);justify-content:center}
+.dots b{width:10px;height:10px;border-radius:50%;background:currentColor;opacity:.3;transition:all var(--t2) var(--ease)}
+.dots b.on{opacity:1;width:38px;border-radius:6px;background:var(--chap-acc)}
+
+/* estrategias */
+.est{overflow:hidden;isolation:isolate}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:-1;cursor:grab;touch-action:pan-y}
+.est::before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(900px 500px at 80% 10%,rgba(242,179,94,.18),transparent 60%),linear-gradient(180deg,var(--g-900),var(--g-800))}
+.est>.wrap{pointer-events:none}.est .head{max-width:900px;position:relative;z-index:2;pointer-events:none}
+.est h2{max-width:18ch}
+.cards{display:grid;grid-template-columns:1.4fr 1fr;gap:var(--s5);margin-top:var(--s8);position:relative;z-index:2;pointer-events:none}
+.card{pointer-events:auto;position:relative;padding:var(--s7);border-radius:var(--r3);background:rgba(255,255,255,.07);border:1px solid var(--line-w);backdrop-filter:blur(22px) saturate(1.3);-webkit-backdrop-filter:blur(22px) saturate(1.3);box-shadow:var(--e3),var(--e-in);overflow:hidden;transition:transform var(--t3) var(--ease),background var(--t3) var(--ease),color var(--t3),border-color var(--t3)}
+.card::before{content:'';position:absolute;inset:0;background:var(--amb);transform:translateY(101%);transition:transform .7s var(--ease-io);z-index:-1}
+.card:hover{transform:translateY(-8px);color:var(--g-900);border-color:transparent}
+.card:hover::before{transform:none}
+.card:hover .sub,.card:hover li{color:var(--g-800)}
+.card .no{font-family:var(--f-d);font-size:var(--fs-xs);letter-spacing:.22em;color:var(--amb);transition:color var(--t2)}.card:hover .no{color:var(--g-800)}
+.card h3{font-size:var(--fs-xl);margin:var(--s4) 0 var(--s3)}
+.card .sub{color:rgba(255,255,255,.82);max-width:38ch}
+.card.big{grid-row:span 2}
+.card.big h3{font-size:clamp(1.8rem,3vw,2.6rem)}
+.card ul{list-style:none;margin-top:var(--s6);display:grid;gap:var(--s3)}
+.card li{display:flex;align-items:center;gap:var(--s3);padding:var(--s4);border-radius:var(--r1);background:rgba(255,255,255,.07);font-family:var(--f-d);font-weight:500;color:#fff;transition:background var(--t2)}
+.card:hover li{background:rgba(255,255,255,.4)}
+.card li i{width:8px;height:8px;border-radius:50%;background:var(--amb);transition:background var(--t2)}.card:hover li i{background:var(--g-800)}
+.est .hint{margin-top:var(--s7);position:relative;z-index:2}
+
+/* diferenciais */
+.dif .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,7vw,110px);align-items:center}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-top:var(--s7)}
+.stat{padding:var(--s5);border-radius:var(--r2);background:#fff;box-shadow:var(--e2);transition:transform var(--t2) var(--spring),box-shadow var(--t2)}
+.stat:hover{transform:translateY(-5px);box-shadow:var(--e3)}
+.stat b{display:block;font-family:var(--f-d);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:700;color:var(--g);line-height:1;letter-spacing:-.04em}
+.stat span{display:block;margin-top:var(--s2);color:var(--ink-2);font-size:var(--fs-sm)}
+.stat:nth-child(2) b{color:var(--amb-d)}.stat:nth-child(3) b{color:var(--sea)}.stat:nth-child(4) b{color:var(--cor)}
+.cmp{position:relative;aspect-ratio:4/3.2;border-radius:var(--r3);overflow:hidden;box-shadow:var(--e4);}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+
+/* valores */
+.val{overflow:hidden;color:#fff;isolation:isolate;background:var(--sea-d)}
+.val .bgimg{position:absolute;inset:0;z-index:-2}.val .bgimg img{width:100%;height:100%;object-fit:cover}
+.val::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,rgba(7,42,57,.93),rgba(8,73,59,.78))}
+.val .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--s5);margin-bottom:var(--s8)}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4)}
+.vcard{padding:var(--s6);min-height:300px;border-radius:var(--r3);display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.08);border:1px solid var(--line-w);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:transform var(--t3) var(--ease),background var(--t3)}
+.vcard:nth-child(1):hover{background:rgba(242,179,94,.85);color:var(--g-900)}
+.vcard:nth-child(2):hover{background:rgba(143,227,198,.9);color:var(--g-900)}
+.vcard:nth-child(3):hover{background:rgba(238,123,90,.9)}
+.vcard:nth-child(4):hover{background:rgba(255,255,255,.92);color:var(--g-900)}
+.vcard:hover{transform:translateY(-10px) rotate(-1deg)}
+.vcard .i{font-family:var(--f-d);font-size:var(--fs-xs);letter-spacing:.2em;opacity:.7}
+.vcard h3{font-size:clamp(1.4rem,2.2vw,2rem);margin-bottom:var(--s3)}
+.vcard p{font-size:var(--fs-sm);opacity:.9}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-top:var(--s8)}
+.mv div{padding:var(--s7);border-radius:var(--r3);background:rgba(3,34,25,.5);border:1px solid var(--line-w);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.mv h4{font-size:var(--fs-xl);margin:var(--s3) 0}.mv p{color:rgba(255,255,255,.84)}
+
+/* contato */
+.ct{position:relative;overflow:hidden;color:#fff;background:var(--g-900);isolation:isolate;padding-block:clamp(96px,13vw,180px) 0}
+.ct .bgimg{position:absolute;inset:0;z-index:-2}.ct .bgimg img{width:100%;height:100%;object-fit:cover}
+.ct::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,34,25,.88),rgba(6,54,43,.82) 60%,var(--g-900))}
+.ct h2{font-size:clamp(2.6rem,7.4vw,7rem);max-width:12ch;letter-spacing:-.045em}
+.ct h2 em{font-style:normal;color:var(--amb)}
+.ct .actions{display:flex;flex-wrap:wrap;gap:var(--s4);margin-top:var(--s7)}
+.ct .info{display:flex;flex-wrap:wrap;gap:var(--s7);margin-top:var(--s8);color:rgba(255,255,255,.82)}
+.ct .info b{display:block;font-family:var(--f-d);color:var(--mint);font-size:var(--fs-xs);letter-spacing:.2em;text-transform:uppercase;margin-bottom:var(--s1)}
+.giant{margin-top:var(--s9);font-family:var(--f-d);font-weight:800;font-size:clamp(5rem,26vw,30rem);line-height:.74;letter-spacing:-.07em;color:transparent;-webkit-text-stroke:2px rgba(143,227,198,.5);white-space:nowrap;text-align:center;overflow:hidden;padding-bottom:.02em;background:linear-gradient(180deg,rgba(143,227,198,.5),transparent 85%);-webkit-background-clip:text;background-clip:text;user-select:none}
+footer.f{background:var(--g-900);color:rgba(255,255,255,.6);padding:var(--s6) 0 var(--s7);font-size:var(--fs-sm);border-top:1px solid var(--line-w)}
+footer.f .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s4);align-items:center}
+footer.f img{height:36px;opacity:.9}footer.f a{color:var(--amb)}
+
+@media(max-width:980px){
+  nav.top .links{display:none}
+  .sobre .grid,.dif .grid,.cards,.mv{grid-template-columns:1fr}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .card.big{grid-row:auto}
+  .wall{height:clamp(420px,110vw,620px)}
+}
+@media(max-width:560px){
+  .vgrid,.stats{grid-template-columns:1fr}
+  .hero .row{flex-direction:column;align-items:flex-start}
+  .card{padding:var(--s6)}
+  nav.top img{height:36px}
+  nav.top .btn{display:none}
+}
+@keyframes sheen{from{background-position:0 0}to{background-position:200% 0}}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.giant{background-size:100% 100%}.fr.b{animation:floaty 7s ease-in-out infinite}.fr.c{animation:floaty 9s ease-in-out infinite reverse}.hero .btn:not(.ghost){background-image:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);background-size:200% 100%;background-repeat:no-repeat;animation:sheen 5s linear infinite}
+@media(prefers-reduced-motion:reduce){.hero .ph img,.hero .sun{animation-duration:80s}}
+</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true"><div class="bar" id="lbar"></div><div class="lt mono">Dorion Wealth<br>Sonhar. Fazer. Viver.</div><div class="num" id="lnum">0</div></div>
+
+<nav class="top" id="nav">
+  <a href="#inicio" aria-label="Dorion Wealth, início"><img src="dorion-wealth-logo-branco.png" alt="Dorion Wealth" width="160" height="58"></a>
+  <div class="links"><a href="#sobre">Quem somos</a><a href="#jornada">Jornada</a><a href="#estrategias">Estratégias</a><a href="#diferenciais">Diferenciais</a><a href="#valores">Valores</a></div>
+  <a class="btn" href="https://wa.me/5571984352973" target="_blank" rel="noopener">Falar com a Dorion <span class="arr">&rarr;</span></a>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="ph"><img src="img/farol-sunset.jpg" alt="Pôr do sol no Farol da Barra, em Salvador" width="3200" height="2351" fetchpriority="high"></div>
+  <div class="sun"></div>
+  <div class="wrap main">
+    <div class="kick mono">Escritório Wealth Powered by AWT &middot; Salvador, Bahia</div>
+    <h1 aria-label="Sonhar. Fazer. Viver.">
+      <span class="ln"><span>Sonhar.</span></span>
+      <span class="ln"><span>Fazer.</span></span>
+      <span class="ln"><span>Viver.</span></span>
+    </h1>
+    <div class="row">
+      <p class="sub">Planejamento patrimonial hiperpersonalizado, com uma atuação próxima, estratégica e transparente, alinhada ao momento de vida de cada cliente.</p>
+      <div class="cta">
+        <a class="btn" href="https://wa.me/5571984352973" target="_blank" rel="noopener">Agendar uma conversa <span class="arr">&rarr;</span></a>
+        <a class="btn ghost" href="#estrategias">Ver estratégias</a>
+      </div>
+    </div>
+  </div>
+  <div class="disc">
+    <div class="wrap">
+      <p>A Dorion Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM.</p>
+      <p>Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+    </div>
+  </div>
+</header>
+
+<section class="photobelt" id="salvador" aria-label="Salvador, a cidade da Dorion">
+  <div class="wrap head">
+    <div class="rv"><div class="eyebrow mono">Nossa cidade</div><h2 style="margin-top:var(--s4)">Salvador é onde começamos.</h2></div>
+    <div class="hint mono rv d1"><i>&harr;</i>Arraste para explorar</div>
+  </div>
+  <div class="belt" id="belt1">
+    <div class="track">
+      <figure class="pcard"><img src="img/centro-historico-aereo.jpg" alt="Centro Histórico de Salvador visto do alto" width="1600" height="1000" loading="lazy"><span>Centro Histórico</span></figure>
+      <figure class="pcard"><img src="img/elevador-lacerda.jpg" alt="Elevador Lacerda" width="1600" height="1000" loading="lazy"><span>Elevador Lacerda</span></figure>
+      <figure class="pcard"><img src="img/pelourinho.jpg" alt="Largo do Pelourinho" width="1600" height="1000" loading="lazy"><span>Pelourinho</span></figure>
+      <figure class="pcard"><img src="img/marina-aerea.jpg" alt="Marina de Salvador" width="1600" height="1000" loading="lazy"><span>Baía de Todos os Santos</span></figure>
+      <figure class="pcard"><img src="img/mam-aereo.jpg" alt="Museu de Arte Moderna da Bahia" width="1600" height="1000" loading="lazy"><span>Solar do Unhão</span></figure>
+      <figure class="pcard"><img src="img/rio-vermelho.jpg" alt="Rio Vermelho visto do alto" width="1600" height="1000" loading="lazy"><span>Rio Vermelho</span></figure>
+      <figure class="pcard"><img src="img/porto-barra-tarde.jpg" alt="Farol da Barra ao entardecer" width="1600" height="1000" loading="lazy"><span>Porto da Barra</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec light sobre" id="sobre">
+  <div class="wrap grid">
+    <div class="wall rv">
+      <figure class="fr a"><img src="img/pai-filho-praia.jpg" alt="Pai e filho caminhando na beira do mar ao pôr do sol" width="1600" height="1000" loading="lazy"><figcaption>Famílias</figcaption></figure>
+      <figure class="fr b"><img src="img/forte-silhuetas.jpg" alt="Silhuetas no Forte de Santo Antônio da Barra" width="1600" height="1000" loading="lazy"><figcaption>Legado</figcaption></figure>
+      <figure class="fr c"><img src="img/por-do-sol-farol.jpg" alt="Pôr do sol sobre a Baía de Todos os Santos" width="1600" height="1000" loading="lazy"><figcaption>Longo prazo</figcaption></figure>
+    </div>
+    <div>
+      <div class="eyebrow mono rv">Quem somos</div>
+      <h2 class="rv d1" style="margin-top:var(--s4)">Seu patrimônio merece uma <em>visão completa.</em></h2>
+      <p class="lead rv d2">A Dorion Wealth oferece soluções financeiras e patrimoniais hiperpersonalizadas, organizando planejamento, proteção e objetivos em um único relacionamento. Acompanhamos cada cliente de perto, com clareza sobre o que somos e sobre o que o ecossistema AWT Group entrega.</p>
+      <p class="lead rv d2">Atendemos empresários consolidados, profissionais no auge da carreira e jovens de alto potencial que buscam orientação estratégica para construir, expandir e proteger o patrimônio.</p>
+      <div class="chips rv d3"><span>Empresários</span><span>Profissionais em ascensão</span><span>Jovens de alto potencial</span></div>
+      <div class="banker rv d3"><div class="av"><img width="1600" height="1000" src="dorion-wealth-icone.png" alt=""></div><div><b>Irllan Alves de Oliveira</b><small>Banker &middot; Dorion Wealth, Salvador</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chap" id="jornada" data-ch="0" aria-label="Sonhar, Fazer, Viver">
+  <div class="wrap head">
+    <div class="rv"><div class="eyebrow mono" style="color:var(--chap-acc)">Nossa jornada</div><h2 style="margin-top:var(--s4)">Três verbos, <em>uma vida</em> planejada.</h2></div>
+    <div class="hint mono rv d1"><i>&harr;</i>Arraste e veja as cores mudarem</div>
+  </div>
+  <div class="belt" id="belt2">
+    <div class="track">
+      <article class="cc"><img src="img/porto-barra-sol.jpg" alt="Entardecer no Porto da Barra" width="1600" height="1000" loading="lazy"><div class="txt"><div class="n">01 &middot; PROPÓSITO</div><h3>Sonhar.</h3><p>Entendemos o seu momento de vida e organizamos o que você quer construir, para você, sua família e seus negócios.</p></div></article>
+      <article class="cc"><img src="img/elevador-lacerda.jpg" alt="Elevador Lacerda, em Salvador" width="1600" height="1000" loading="lazy"><div class="txt"><div class="n">02 &middot; EXECUÇÃO</div><h3>Fazer.</h3><p>Transformamos objetivos em plano, e conectamos você às soluções especializadas do AWT Group, cada uma com a empresa habilitada.</p></div></article>
+      <article class="cc"><img src="img/familias-por-do-sol.jpg" alt="Famílias na praia ao pôr do sol" width="1600" height="1000" loading="lazy"><div class="txt"><div class="n">03 &middot; LEGADO</div><h3>Viver.</h3><p>Acompanhamos cada etapa com visão de longo prazo, para que o patrimônio sustente a vida que você escolheu.</p></div></article>
+    </div>
+  </div>
+  <div class="dots" id="dots1"><b></b><b></b><b></b></div>
+</section>
+
+<section class="sec dark est" id="estrategias">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow mono rv">Especialidades</div>
+      <h2 class="rv d1" style="margin-top:var(--s4)">Uma única estratégia de <em>planejamento.</em></h2>
+      <p class="lead rv d2" style="margin-top:var(--s5)">Organizamos as soluções patrimoniais em uma visão integrada e facilitamos o acesso aos profissionais e instituições habilitados para cada necessidade.</p>
+    </div>
+    <div class="cards">
+      <article class="card big rv">
+        <div class="no">01</div>
+        <h3>Planejamento para investimentos</h3>
+        <p class="sub">Estratégias para acumular, proteger e multiplicar seu patrimônio.</p>
+        <ul><li><i></i>Multimercado</li><li><i></i>Renda Fixa</li><li><i></i>Crédito Privado</li></ul>
+      </article>
+      <article class="card rv d1">
+        <div class="no">02</div>
+        <h3>Previdência</h3>
+        <p class="sub">Estratégias para conquistar eficiência tributária e sucessória.</p>
+      </article>
+      <article class="card rv d2">
+        <div class="no">03</div>
+        <h3>Sucessório e Holding</h3>
+        <p class="sub">Estratégias para desenhar estruturas societárias e perpetuar legado.</p>
+      </article>
+    </div>
+    <div class="hint mono"><i>&harr;</i>Arraste o mar para girar a baía</div>
+  </div>
+</section>
+
+<section class="sec sand dif" id="diferenciais">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow mono rv">Diferenciais</div>
+      <h2 class="rv d1" style="margin-top:var(--s4)">Uma visão <em>360º</em> do seu patrimônio.</h2>
+      <p class="lead rv d2" style="margin-top:var(--s5)">Um time de economistas com certificações PQO, PCA e CPRO-R e experiência no relacionamento com clientes de alta renda, em uma visão 360º do patrimônio.</p>
+      <div class="stats">
+        <div class="stat rv"><b data-to="360" data-suf="º">0</b><span>Visão completa da vida financeira e patrimonial</span></div>
+        <div class="stat rv d1"><b data-to="3">0</b><span>Certificações no time: PQO, PCA e CPRO-R</span></div>
+        <div class="stat rv d2"><b data-to="5">0</b><span>Especialidades integradas em um só plano</span></div>
+        <div class="stat rv d3"><b data-to="4">0</b><span>Valores que orientam cada decisão</span></div>
+      </div>
+    </div>
+    <div>
+      <figure class="cmp rv d1"><img src="img/rio-vermelho.jpg" alt="Rio Vermelho, em Salvador, visto do alto" width="1600" height="1000" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec val" id="valores">
+  <div class="bgimg"><img src="img/porto-barra-tarde.jpg" alt="" width="1600" height="1000" loading="lazy"></div>
+  <div class="wrap">
+    <div class="head">
+      <div class="rv"><div class="eyebrow mono">O que nos move</div><h2 style="margin-top:var(--s4)">Valores para <em>construir legados.</em></h2></div>
+    </div>
+    <div class="vgrid">
+      <article class="vcard rv"><span class="i">01</span><div><h3>Protagonismo</h3><p>Você no centro das decisões, com orientação clara em cada passo.</p></div></article>
+      <article class="vcard rv d1"><span class="i">02</span><div><h3>Execução</h3><p>Planos que saem do papel e ganham rotina, prazo e acompanhamento.</p></div></article>
+      <article class="vcard rv d2"><span class="i">03</span><div><h3>Responsabilidade</h3><p>Transparência sobre o que fazemos e sobre o que cada empresa do AWT Group presta.</p></div></article>
+      <article class="vcard rv d3"><span class="i">04</span><div><h3>Longevidade</h3><p>Relações de confiança e visão de longo prazo para um legado duradouro.</p></div></article>
+    </div>
+    <div class="mv">
+      <div class="rv"><span class="mono" style="color:var(--amb)">Missão</span><h4>Soluções hiperpersonalizadas</h4><p>Oferecer soluções financeiras e patrimoniais hiperpersonalizadas, integrando planejamento e proteção patrimonial, por meio de uma atuação próxima, estratégica e transparente, alinhada aos objetivos e ao momento de vida de cada cliente.</p></div>
+      <div class="rv d1"><span class="mono" style="color:var(--mint)">Visão</span><h4>Referência em Salvador</h4><p>Ser uma referência em Salvador na construção e proteção patrimonial, com soluções hiperpersonalizadas, excelência na análise de riscos e estratégias alinhadas aos objetivos individuais, construindo relações de confiança e legados duradouros.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ct" id="contato">
+  <div class="bgimg"><img src="img/porto-barra-sol.jpg" alt="" width="1600" height="1000" loading="lazy"></div>
+  <div class="wrap">
+    <div class="eyebrow mono rv" style="color:var(--mint)">Vamos conversar</div>
+    <h2 class="rv d1" style="margin-top:var(--s4)">Seu patrimônio, seus projetos, <em>seu futuro.</em></h2>
+    <div class="actions rv d2">
+      <a class="btn" href="https://wa.me/5571984352973" target="_blank" rel="noopener">Chamar no WhatsApp <span class="arr">&rarr;</span></a>
+      <a class="btn ghost" href="mailto:irllanalves14@gmail.com">Enviar um e-mail</a>
+    </div>
+    <div class="info rv d3">
+      <div><b>Banker</b>Irllan Alves de Oliveira</div>
+      <div><b>Celular</b><a href="tel:+5571984352973">+55 (71) 98435-2973</a></div>
+      <div><b>E-mail</b><a href="mailto:irllanalves14@gmail.com">irllanalves14@gmail.com</a></div>
+      <div><b>Cidade</b>Salvador, Bahia</div>
+    </div>
+  </div>
+  <div class="giant" aria-hidden="true">dorion</div>
+</section>
+<footer class="f"><div class="wrap"><img src="dorion-wealth-logo-branco.png" alt="Dorion Wealth" width="120" height="44"><span>Dorion Wealth &middot; Escritório Wealth Powered by AWT &middot; <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">Avisos Legais e Regulatórios</a></span></div></footer>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  /* loader */
+  var ln=$('#lnum'),lb=$('#lbar'),v=0,ready=false;
+  function finish(){if(ready)return;ready=true;$('#loader').classList.add('done');document.body.classList.add('ready');setTimeout(function(){$$('.rv').forEach(function(e){io.observe(e)})},350)}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);var b=$('[data-to]',e.target);if(b)count(b)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  var t=setInterval(function(){v+=Math.ceil(Math.random()*9);if(v>=100){v=100;clearInterval(t);setTimeout(finish,250)}ln.textContent=v;lb.style.width=v+'%'},60);
+  setTimeout(finish,4500);
+  function count(b){var to=+b.dataset.to,suf=b.dataset.suf||'',t0=performance.now();(function f(n){var k=Math.min(1,(n-t0)/1400),e=1-Math.pow(1-k,4);b.textContent=Math.round(to*e)+suf;if(k<1)requestAnimationFrame(f)})(t0)}
+  /* nav */
+  var nav=$('#nav');addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>40)},{passive:true});
+
+  /* infinite belt: drag + auto loop */
+  function belt(root,o){
+    o=o||{};var track=$('.track',root),items=$$('.track>*',root),N=items.length;
+    for(var k=0;k<2;k++)items.forEach(function(it){var c=it.cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c)});
+    var all=$$('.track>*',root),stride=0,cw=0,pos=0,target=0,vel=0,drag=false,sx=0,sp=0,lx=0,lt=0,last=performance.now(),nextAt=last+o.every,on=false,act=-1;
+    function measure(){cw=items[0].offsetWidth;var mr=parseFloat(getComputedStyle(items[0]).marginRight)||0;stride=cw+mr}
+    measure();addEventListener('resize',measure);
+    new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(root);
+    root.addEventListener('pointerdown',function(e){drag=true;root.classList.add('drag');sx=e.clientX;sp=pos;lx=e.clientX;lt=performance.now();vel=0;root.setPointerCapture(e.pointerId)});
+    root.addEventListener('pointermove',function(e){if(!drag)return;var now=performance.now();pos=sp-(e.clientX-sx);target=pos;vel=-(e.clientX-lx)/Math.max(1,now-lt)*16;lx=e.clientX;lt=now});
+    function up(){if(!drag)return;drag=false;root.classList.remove('drag');if(o.cover){target=Math.round((pos+vel*14)/stride)*stride;nextAt=performance.now()+o.every}}
+    root.addEventListener('pointerup',up);root.addEventListener('pointercancel',up);
+    function frame(now){
+      requestAnimationFrame(frame);if(!on)return;var dt=Math.min(40,now-last)/16.67;last=now;
+      if(!drag){
+        if(o.cover){if(now>nextAt){target+=stride;nextAt=now+o.every}pos+=(target-pos)*Math.min(1,.085*dt)}
+        else{pos+=(o.speed+vel)*dt;vel*=Math.pow(.94,dt)}
+      }
+      var W=N*stride;if(pos>=W){pos-=W;target-=W}else if(pos<0){pos+=W;target+=W}
+      var rw=root.clientWidth,T=rw/2-W-cw/2-pos;track.style.transform='translate3d('+T+'px,0,0)';
+      if(o.cover){
+        for(var i=0;i<all.length;i++){var cx=i*stride+cw/2+T,d=(cx-rw/2)/stride,ad=Math.abs(d);
+          if(ad>2.6){all[i].style.visibility='hidden';continue}all[i].style.visibility='';
+          all[i].style.transform='translateZ('+(-ad*170)+'px) rotateY('+(-d*34)+'deg) scale('+(1-Math.min(ad,1.5)*.07)+')';
+          all[i].style.filter='brightness('+(1-Math.min(ad,1.6)*.28)+')'}
+        var a=((Math.round(pos/stride)%N)+N)%N;if(a!==act){act=a;o.onActive&&o.onActive(a)}
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  belt($('#belt1'),{speed:.5});
+  var themes=[['#f4e1c1','#0b2a22','#d9582f'],['#0d7a5f','#ffffff','#f2b35e'],['#0b3e52','#ffffff','#8fe3c6']];
+  var chap=$('#jornada'),dots=$$('#dots1 b');
+  belt($('#belt2'),{cover:true,every:4800,onActive:function(a){var th=themes[a];chap.style.setProperty('--chap-bg',th[0]);chap.style.setProperty('--chap-ink',th[1]);chap.style.setProperty('--chap-acc',th[2]);dots.forEach(function(d,i){d.classList.toggle('on',i===a)})}});
+
+})();
+</script>
+<script type="module">
+import * as THREE from 'three';
+(function(){
+  var cv=document.getElementById('gl'),host=cv.parentElement;
+  var r;try{r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){return}
+  r.setPixelRatio(Math.min(devicePixelRatio,1.6));
+  var sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(48,1,.1,200);cam.position.set(0,7,24);cam.lookAt(0,-1,0);
+  var NX=170,NZ=90,pos=new Float32Array(NX*NZ*3),k=0;
+  for(var z=0;z<NZ;z++)for(var x=0;x<NX;x++){pos[k++]=(x-NX/2)*.55;pos[k++]=0;pos[k++]=(z-NZ/2)*.55}
+  var g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  var u={t:{value:0},yaw:{value:0},c1:{value:new THREE.Color('#0d7a5f')},c2:{value:new THREE.Color('#8fe3c6')},c3:{value:new THREE.Color('#f2b35e')}};
+  var m=new THREE.ShaderMaterial({uniforms:u,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+    vertexShader:'uniform float t;varying float h;varying float f;void main(){vec3 p=position;float w=sin(p.x*.45+t*1.1)*.9+sin(p.z*.55-t*.9)*.8+sin((p.x+p.z)*.3+t*.6)*.7;p.y=w;h=w;vec4 mv=modelViewMatrix*vec4(p,1.);f=clamp(1.-(-mv.z)/60.,0.,1.);gl_PointSize=(2.6+max(w,0.)*1.3)*(34./(-mv.z));gl_Position=projectionMatrix*mv;}',
+    fragmentShader:'uniform vec3 c1;uniform vec3 c2;uniform vec3 c3;varying float h;varying float f;void main(){float d=length(gl_PointCoord-.5);if(d>.5)discard;float s=smoothstep(.5,.1,d);float k=smoothstep(-1.,2.4,h);vec3 c=mix(c1,c2,k);c=mix(c,c3,smoothstep(1.6,2.4,h));gl_FragColor=vec4(c,s*(.25+f*.8));}'});
+  var pts=new THREE.Points(g,m);sc.add(pts);pts.rotation.x=-.1;
+  function size(){var w=host.clientWidth,h=host.clientHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+  size();addEventListener('resize',size);
+  var dragging=false,lx=0,tyaw=0,vyaw=0,on=false;
+  new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(host);
+  cv.addEventListener('pointerdown',function(e){dragging=true;lx=e.clientX;cv.setPointerCapture(e.pointerId)});
+  cv.addEventListener('pointermove',function(e){if(!dragging)return;vyaw=(e.clientX-lx)*.004;tyaw+=vyaw;lx=e.clientX});
+  var up=function(){dragging=false};cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+  var t0=performance.now();
+  (function loop(n){requestAnimationFrame(loop);if(!on)return;u.t.value=(n-t0)/1000;if(!dragging){tyaw+=.0016+vyaw;vyaw*=.95}
+    pts.rotation.y=tyaw;r.render(sc,cam)})(0);
+  document.documentElement.classList.add('gl');
+})();
+</script>
+</body>
+</html>
